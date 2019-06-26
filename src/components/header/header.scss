@@ -1,15 +1,29 @@
 .header {
-    background: grey;
+    background: #191919;
     margin-bottom: 1.45rem;
     height: 100vh;
+    position: relative;
+
+    &_particles {
+        position: relative;
+        z-index: 1
+    }
 
     &_name-container {
         margin: 0 auto;
-        max-width: 960px;
-        padding: 1.45rem 1.0875rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
 
         &_name {
             color: #fff;
+            z-index: 2;
         }
     }
 }
