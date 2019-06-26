@@ -1,0 +1,15 @@
+.header {
+    background: grey;
+    margin-bottom: 1.45rem;
+    height: 100vh;
+
+    &_name-container {
+        margin: 0 auto;
+        max-width: 960px;
+        padding: 1.45rem 1.0875rem;
+
+        &_name {
+            color: #fff;
+        }
+    }
+}

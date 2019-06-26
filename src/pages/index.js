@@ -5,6 +5,12 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import History from "../components/sections/history/history"
+import About from "../components/sections/about/about"
+import Skills from "../components/sections/skills/skills"
+import Projects from "../components/sections/projects/projects"
+import Contact from "../components/sections/contact/contact"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -14,7 +20,13 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+
+    <History />
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
+    
   </Layout>
 )
 
