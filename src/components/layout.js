@@ -13,6 +13,9 @@ import Helmet from "react-helmet"
 import Header from "./header/header"
 import Footer from "./footer/footer"
 import "./layout.css"
+import "./layout-override.scss"
+
+import CssBaseline from '@material-ui/core/CssBaseline'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,17 +30,16 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      <CssBaseline />
       <Helmet>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
+          width:'100%'
         }}
       >
         <main>{children}</main>

@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -120,8 +119,11 @@ const Header = ({ siteTitle }) => (
         },
         retina_detect: true
       }} />
-    <div className="header_name-container">
-      <h1 className="header_name-container_name">{siteTitle}</h1>
+    <div className="header_wrapper">
+      <div className="header_wrapper_name">
+        <h1>{ siteTitle }</h1>
+        <h3>Developer</h3>
+      </div>
     </div>
   </header>
 )

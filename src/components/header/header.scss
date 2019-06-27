@@ -1,15 +1,16 @@
 .header {
     background: #191919;
-    margin-bottom: 1.45rem;
     height: 100vh;
     position: relative;
 
     &_particles {
         position: relative;
-        z-index: 1
+        z-index: 1;
+        height: 100%;
+        width: 100%;
     }
 
-    &_name-container {
+    &_wrapper {
         margin: 0 auto;
         position: absolute;
         top: 0;
@@ -19,11 +20,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 0;
+        background-color: transparent;
+        z-index: 2;
 
         &_name {
-            color: #fff;
-            z-index: 2;
+            padding: 35px 60px;
+            background-color: black;
+            border-radius: 25px;
+            border: 1px solid #a9b1b6;
+
+            & > * {
+                color: #a9b1b6;
+                text-align: center;
+            }
         }
     }
 }

@@ -1,5 +1,11 @@
 .history {
-    height: 50vh;
-    background-color: darkgrey;
+    min-height: 100vh;
+    height: auto;
     color: white;
+    position: relative;
+
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
 }
