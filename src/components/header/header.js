@@ -3,7 +3,7 @@ import React from "react"
 
 import Particles from 'react-particles-js';
 
-import "./Header.scss"
+import "./header.scss"
 
 const Header = ({ siteTitle }) => (
   <header className="header">
