@@ -1,25 +1,27 @@
-.divider {
-    height: 1px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    background-color: #191919;
-    background-image: radial-gradient(
-        20rem at center,
-        lighten(blue, 20%),
-        #191919
-    );
-}
+.section-gradient-header {
+    &_divider {
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background-color: #191919;
+        background-image: radial-gradient(
+            20rem at center,
+            lighten(blue, 20%),
+            #191919
+        );
+    }
 
-.gradient {
-    background: radial-gradient(
-    ellipse at top,
-    darken(blue, 20%) -100%,
-    #191919 70%
-    );
-    height: 27rem;
-    width: 100%;
-    position: absolute;
+    &_gradient {
+        background: radial-gradient(
+        ellipse at top,
+        darken(blue, 20%) -100%,
+        #191919 70%
+        );
+        height: 27rem;
+        width: 100%;
+        position: absolute;
+    }
 }

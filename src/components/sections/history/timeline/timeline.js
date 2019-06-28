@@ -6,13 +6,20 @@ import "./timeline.scss"
 
 const timeline = (props) => {
 
-    const bullets = props.bullets.map((el) => {
-        return <Bullet title={ el.title } key={ el.title }/>
+    const timelineHeight = 500
+
+    const bullets = props.bullets.map((el, index) => {
+        return <Bullet 
+                    title={ el.title } 
+                    key={ index } 
+                    order={ index + 1 } 
+                    orientation={ index % 2 === 0 ? "left" : "right" }
+                    heightIncrement={ timelineHeight / (props.bullets.length + 2) } />
     })
 
     return (
-        <div>
-            <div className="timeline"></div>
+        <div className="timeline">
+            <div className="timeline_line" style={{ height: timelineHeight + "px" }}></div>
             { bullets }
         </div>
 

@@ -1,5 +1,10 @@
 .about {
-    height: 50vh;
-    background-color: darkcyan;
+    height: 100vh;
     color: white;
+    position: relative;
+    
+    & h1 {
+        position: relative;
+        z-index: 1;
+    }
 }

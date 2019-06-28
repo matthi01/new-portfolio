@@ -1,5 +1,10 @@
 .skills {
-    height: 50vh;
-    background-color: darkmagenta;
+    height: 100vh;
     color: white;
+    position: relative;
+
+    & h1 {
+        position: relative;
+        z-index: 1;
+    }
 }
