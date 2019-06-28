@@ -20,8 +20,8 @@ const Construction = () => {
                             color: "#fff" }} >
                 <div className="construction-page" style={{ textAlign: "center" }}>
                     <h1>Sorry!</h1>
-                    <h2>New and improved site</h2>
-                    <h2>is coming soon!</h2>
+                    <h2>New Site</h2>
+                    <h2>Coming Soon!</h2>
                 </div>
                 
                 <div style={{ 
@@ -29,8 +29,7 @@ const Construction = () => {
                             flexDirection: "row", 
                             justifyContent: "space-around", 
                             alignItems: "center",
-                            width: "200px",
-                            marginTop: "100px" }} >
+                            width: "200px" }} >
                     <SocialIcon url="https://github.com/matthi01" network="github" fgColor="white" />
                     <SocialIcon url="https://ca.linkedin.com/in/matthias-ruhland" network="linkedin" fgColor="white" />
                     <SocialIcon url="https://facebook.com/matthias-ruhland" network="facebook" fgColor="white" />
