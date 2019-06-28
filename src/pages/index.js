@@ -1,25 +1,40 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-import History from "../components/sections/history/history"
-import About from "../components/sections/about/about"
-import Skills from "../components/sections/skills/skills"
-import Projects from "../components/sections/projects/projects"
-import Contact from "../components/sections/contact/contact"
+import Image from "../components/image"
+import { SocialIcon } from 'react-social-icons';
 
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <History />
-    <Skills />
-    <About />
-    <Projects />
-    <Contact />
+const Construction = () => {
+    return (
+        <div>
+            <Image />
+            <div style={{ 
+                            display: "flex", 
+                            flexDirection: "column", 
+                            justifyContent: "center", 
+                            alignItems: "center", 
+                            position: "relative", 
+                            zIndex: 1, 
+                            height: "100vh", 
+                            color: "#fff" }}>
+                <h1>Sorry! </h1>
+                <h3>I'm currently rebuilding this site!</h3>
 
-  </Layout>
-)
+                <div style={{ 
+                            display: "flex", 
+                            flexDirection: "row", 
+                            justifyContent: "space-around", 
+                            alignItems: "center",
+                            width: "200px",
+                            marginTop: "100px" }}>
+                    <SocialIcon url="https://github.com/matthi01" network="github" fgColor="white" />
+                    <SocialIcon url="https://ca.linkedin.com/in/matthias-ruhland" network="linkedin" fgColor="white" />
+                    <SocialIcon url="https://facebook.com/matthias-ruhland" network="facebook" fgColor="white" />
+                </div>
+            </div>
+        </div>
 
-export default IndexPage
+    )
+}
+
+export default Construction
