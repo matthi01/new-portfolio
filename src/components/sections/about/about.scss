@@ -3,9 +3,9 @@
     height: auto;
     color: #a9b1b6;
     position: relative;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     
-    & h1 {
+    & > * {
         position: relative;
         z-index: 1;
     }

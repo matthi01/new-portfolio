@@ -1,7 +1,64 @@
 .project {
-    height: 250px;
-    width: 250px;
-    background-color: red;
-    color: white;
+    height: auto;
+    width: 300px;
+    background-color: blue;
+    color: #a9b1b6;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    box-shadow: 0px 0px 8px 0px white;
+    border: 1px solid #a9b1b6;
+    position: relative;
+
+    &_image {
+        height: 215px;
+        position: relative;
+
+        &_img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &_drawer {
+        height: 35px;
+        background-color: black;
+        border-top: 1px solid white;
+        position: relative;
+
+        &_open {
+            height: 150px;
+            transition: .5s;
+
+            & .project_drawer_description {
+                display: block;
+            }
+        }
+
+        &_closed {
+            height: 35px;
+            transition: .5s;
+
+            & .project_drawer_description {
+                display: none;
+            }
+        }
+
+        &_icon {
+            color: #a9b1b6;
+            font-size: 20px;
+            height: 35px;
+            border-top: 1px solid white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+    }
 }

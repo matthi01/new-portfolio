@@ -4,10 +4,8 @@ import "./footer.scss"
 
 const footer = () => {
     return (
-        <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer className="footer">
+            ©{new Date().getFullYear()} Matthias Ruhland
         </footer>
     )
 }
