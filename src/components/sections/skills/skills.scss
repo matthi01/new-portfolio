@@ -1,7 +1,19 @@
 .skills {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     color: white;
     position: relative;
+    padding-bottom: 100px;
+
+    &_wrapper {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
     & h1 {
         position: relative;

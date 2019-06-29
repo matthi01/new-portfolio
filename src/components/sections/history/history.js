@@ -29,7 +29,7 @@ const history = () => {
     return (
         <div className="history">
             <SectionGradientHeader />
-            <h1>This is the History component</h1>
+            <h1>History</h1>
             <Timeline bullets={ arrHistoryBullets } />
 
         </div>

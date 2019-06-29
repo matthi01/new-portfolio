@@ -12,6 +12,7 @@ import Helmet from "react-helmet"
 
 import Header from "./header/header"
 import Footer from "./footer/footer"
+import Navigation from "./ui/navigation/navigation"
 import "./layout.css"
 import "./layout-override.scss"
 
@@ -36,12 +37,13 @@ const Layout = ({ children }) => {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
       </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           width:'100%'
         }}
       >
+        <Navigation />
+        <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <Footer />
       </div>

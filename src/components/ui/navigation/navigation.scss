@@ -1,0 +1,19 @@
+.navigation {
+    position: fixed;
+    background-color: black;
+    height: 100vh;
+    width: 60px;
+    z-index: 999;
+    color: white;
+
+    &_toggle {
+        height: 40px;
+        width: 40px;
+        border: 1px solid white;
+        background-color: black;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-20px) rotate(45deg);
+    }
+}

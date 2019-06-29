@@ -1,0 +1,24 @@
+.skill-container {
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    position: relative;
+    z-index: 1;
+    height: 500px;
+    width: 200px;
+
+    &_title {
+        height: 50px;
+        border-bottom: 1px solid white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_skill {
+        margin: 10px auto;
+        text-align: center;
+    }
+}
