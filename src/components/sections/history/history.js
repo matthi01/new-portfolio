@@ -27,7 +27,7 @@ const history = () => {
     ]
 
     return (
-        <div className="history">
+        <div className="history" id="history">
             <SectionGradientHeader />
             <h1>History</h1>
             <Timeline bullets={ arrHistoryBullets } />

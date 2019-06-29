@@ -1,19 +1,55 @@
+@import "../../helpers/parameters.scss";
+
 .navigation {
     position: fixed;
     background-color: black;
     height: 100vh;
     width: 60px;
     z-index: 999;
-    color: white;
+    color: #a9b1b6;
+    border-right: 1px solid #a9b1b6;
+    transition: 1s;
 
     &_toggle {
         height: 40px;
         width: 40px;
-        border: 1px solid white;
+        border: 1px solid #a9b1b6;
         background-color: black;
         position: absolute;
         right: -20px;
         top: 50%;
         transform: translateY(-20px) rotate(45deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &_open {
+        width: 200px;
+        transition: 1s;
+    }
+
+    &_links {
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 24px;
+
+        & div {
+            margin: 20px;
+
+            & a {
+                text-decoration: none;
+                color: #a9b1b6;
+            }
+        }
     }
 }

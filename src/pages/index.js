@@ -3,7 +3,7 @@ import React from "react"
 import Image from "../components/image"
 import { SocialIcon } from "react-social-icons"
 
-import "../components/styles/construction-page.scss"
+import "../styles/construction-page.scss"
 
 const Construction = () => {
     return (

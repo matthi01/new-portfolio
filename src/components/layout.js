@@ -18,6 +18,11 @@ import "./layout-override.scss"
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

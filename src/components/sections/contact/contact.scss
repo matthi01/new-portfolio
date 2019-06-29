@@ -1,5 +1,12 @@
 .contact {
-    height: 50vh;
-    background-color: darkorange;
-    color: white;
+    min-height: 100vh;
+    height: auto;
+    color: #a9b1b6;
+    position: relative;
+    padding-bottom: 100px;
+
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
 }

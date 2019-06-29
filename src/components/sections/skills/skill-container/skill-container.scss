@@ -1,8 +1,8 @@
 .skill-container {
-    border: 1px solid white;
+    border: 1px solid #a9b1b6;
     border-radius: 25px;
     background-color: black;
-    color: white;
+    color: #a9b1b6;
     position: relative;
     z-index: 1;
     height: 500px;
@@ -10,7 +10,7 @@
 
     &_title {
         height: 50px;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #a9b1b6;
         width: 100%;
         display: flex;
         justify-content: center;

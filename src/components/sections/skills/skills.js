@@ -7,7 +7,7 @@ import "./skills.scss"
 
 const skills = () => {
     return (
-        <div className="skills">
+        <div className="skills" id="skills">
             <h1>Skills</h1>
             <div className="skills_wrapper">
                 <SkillContainer title="Languages" skills={["skill1", "skill2", "skill3"]} />
