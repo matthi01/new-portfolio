@@ -9,7 +9,7 @@
         background-color: #191919;
         background-image: radial-gradient(
             20rem at center,
-            lighten(blue, 20%),
+            lighten(blue, 35%),
             #191919
         );
     }
@@ -17,11 +17,12 @@
     &_gradient {
         background: radial-gradient(
         ellipse at top,
-        darken(blue, 20%) -100%,
+        darken(blue, 35%) -100%,
         #191919 70%
         );
         height: 27rem;
         width: 100%;
         position: absolute;
+        top: 0;
     }
 }

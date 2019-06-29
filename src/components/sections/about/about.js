@@ -7,7 +7,7 @@ import "./about.scss"
 const about = () => {
     return (
         <div className="about" id="about">
-            <h1>This is the about component</h1>
+            <h1>About</h1>
             <SectionGradientFooter />
         </div>
     )

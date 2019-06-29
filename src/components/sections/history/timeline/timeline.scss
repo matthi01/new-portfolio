@@ -7,7 +7,8 @@
 
     &_line {
         width: 1px;
-        background-color: #a9b1b6;
+        // background-color: #a9b1b6;
+        background-image: linear-gradient(transparent, #a9b1b6);
         position: absolute;
         left: 50%;
         right: 50%;
