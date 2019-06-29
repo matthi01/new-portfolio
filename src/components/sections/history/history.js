@@ -10,19 +10,19 @@ const history = () => {
         {
             title: "Camosun",
             date: "2012",
-            description: "add some wording here"
+            description: "Diploma in Computer Systems Technology"
         }, {
             title: "Royal Roads",
             date: "2012",
-            description: "add some wording here",
+            description: "Co-op working with PHP to create search algorithms / first introduction to Drupal... it wasn't great",
         }, {
             title: "Fast Enterprises",
             date: "2012 - 2018",
-            description: "add some wording here",
+            description: "Team Lead for eTaxBC, developer for discovery, audit, and data warehousing",
         }, {
             title: "Blockstream",
             date: "2018 - present",
-            description: "add some wording here",
+            description: "Web Developer / Junior iOS Developer",
         }
     ]
 

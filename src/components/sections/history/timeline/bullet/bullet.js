@@ -9,7 +9,11 @@ const bullet = (props) => {
 
     return (
         <div className={ props.orientation } style={{ top: topDistance }}>
-            <div className="bullet">{ props.title }</div>
+            <div className="bullet">
+                <h3>{ props.title }</h3>
+                <p>{ props.date }</p>
+                <p>{ props.description }</p>
+            </div>
         </div>
     )
 }

@@ -6,17 +6,17 @@ const skillContainer = (props) => {
 
     const elSkills = props.skills.map((skill) => {
         return (
-                    <div className="skill-container_skill">
+                    <p className="skill-container_skill">
                         { skill }
-                    </div>
+                    </p>
                 )
     })
 
     return (
         <div className="skill-container">
-            <div className="skill-container_title">
+            <h3 className="skill-container_title">
                 { props.title }
-            </div>
+            </h3>
             { elSkills }
         </div>
     )

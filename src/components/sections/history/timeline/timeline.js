@@ -11,6 +11,8 @@ const timeline = (props) => {
     const bullets = props.bullets.map((el, index) => {
         return <Bullet 
                     title={ el.title } 
+                    date={ el.date }
+                    description={ el.description }
                     key={ index } 
                     order={ index + 1 } 
                     orientation={ index % 2 === 0 ? "left" : "right" }

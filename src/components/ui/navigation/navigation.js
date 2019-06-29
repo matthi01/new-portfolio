@@ -19,36 +19,18 @@ class Navigation extends React.Component {
             }))
         }
 
-        const navLinks = (
-            <div className="navigation_links">
-                <div><Link to="index-final/#history">History</Link></div>
-                <div><Link to="index-final/#skills">Skills</Link></div>
-                <div><Link to="index-final/#about">About</Link></div>
-                <div><Link to="index-final/#projects">Projects</Link></div>
-            </div>
-        )
-
-        let navigation = (
-            <div className="navigation">
-                <div className="navigation_toggle" onClick={navigationClickHandler}>
-                    <FaBars />
-                </div>
-            </div>
-        )
-
-        if (this.state.navOpen) {
-            navigation = (
-                <div className="navigation navigation_open">
-                    <div className="navigation_toggle" onClick={navigationClickHandler}>
-                        <FaTimes />
-                    </div>
-                    { navLinks }
-                </div>
-            )
-        }
-
         return (
-            navigation 
+            <div className={ this.state.navOpen ? "navigation navigation_open" : "navigation navigation" }>
+                <div className="navigation_toggle" onClick={navigationClickHandler}>
+                    { this.state.navOpen ? <FaTimes /> : <FaBars /> }
+                </div>
+                <div className={ this.state.navOpen ? "navigation_links navigation_links_show" : "navigation_links navigation_links_hide" }>
+                    <div><Link to="index-final/#history">History</Link></div>
+                    <div><Link to="index-final/#skills">Skills</Link></div>
+                    <div><Link to="index-final/#about">About</Link></div>
+                    <div><Link to="index-final/#projects">Projects</Link></div>
+                </div>
+            </div> 
         )
     }
 }
