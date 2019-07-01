@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FaArrowAltCircleUp, FaArrowAltCircleDown } from 'react-icons/fa'
+import { FaPlusCircle, FaMinusCircle } from 'react-icons/fa'
 import "./project.scss"
 
 class Project extends React.Component {
@@ -26,7 +26,7 @@ class Project extends React.Component {
             <div className={ this.state.drawerOpen ? "project_drawer project_drawer_open" : "project_drawer project_drawer_closed" } onClick={ drawerClickHandler }>
                 <div className="project_drawer_description">{ this.props.description }</div>
                 <div className="project_drawer_icon">
-                    { this.state.drawerOpen ? <FaArrowAltCircleUp /> : <FaArrowAltCircleDown /> }
+                    { this.state.drawerOpen ? <FaMinusCircle /> : <FaPlusCircle /> }
                 </div>
             </div>
         </div>

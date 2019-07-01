@@ -1,7 +1,6 @@
 .project {
-    height: auto;
+    height: 250px;
     width: 300px;
-    background-color: blue;
     color: #a9b1b6;
     text-align: center;
     display: flex;
@@ -18,7 +17,6 @@
 
         &_img {
             position: relative;
-            background-color: red;
             height: 100%;
             width: 100%;
         }
@@ -32,7 +30,12 @@
         
 
         &_open {
-            height: 150px;
+            // height: 150px;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
             transition: .5s;
 
             & .project_drawer_description {
