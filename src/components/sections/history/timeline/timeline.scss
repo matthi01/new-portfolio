@@ -1,14 +1,14 @@
 .timeline {
-    height: 80vh;
-    width: 450px;
+    min-height: 150vh;
+    height: auto;
+    width: 700px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 
     &_line {
-        width: 1px;
-        // background-color: #a9b1b6;
-        background-image: linear-gradient(transparent, #a9b1b6);
+        width: 3px;
+        background-image: linear-gradient(#a9b1b6, transparent);
         position: absolute;
         left: 50%;
         right: 50%;

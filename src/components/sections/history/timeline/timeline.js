@@ -6,7 +6,7 @@ import "./timeline.scss"
 
 const timeline = (props) => {
 
-    const timelineHeight = 500
+    const timelineHeight = 1000
 
     const bullets = props.bullets.map((el, index) => {
         return <Bullet 
