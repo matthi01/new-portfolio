@@ -1,7 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-import Particles from 'react-particles-js';
+import Particles from 'react-particles-js'
+import Avatar from "../ui/avatar/avatar"
+
+import avatarImage from "../../images/avatar.png"
 
 import "./header.scss"
 
@@ -121,6 +124,7 @@ const Header = ({ siteTitle }) => (
       }} />
     <div className="header_wrapper">
       <div className="header_wrapper_name">
+        <Avatar image={ avatarImage } />
         <h1>{ siteTitle }</h1>
         <h3>Developer</h3>
       </div>

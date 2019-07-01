@@ -10,14 +10,14 @@
 
     &_connector {
         width: 100px;
-        height: 1px;
-        background-color: #a9b1b6;;
+        height: 2px;
 
         &-left {
             position: absolute;
             top: 50%;
             bottom: 50%;
             left: -100px;
+            background-image: linear-gradient(to left, #a9b1b6, transparent);
         }
 
         &-right {
@@ -25,6 +25,7 @@
             top: 50%;
             bottom: 50%;
             right: -100px;
+            background-image: linear-gradient(to right, #a9b1b6, transparent);
         }
     }
 }

@@ -20,7 +20,7 @@ class Project extends React.Component {
             <div className="project">
             <div className="project_image">
                 <a href={ this.props.link } target="blank">
-                    <img className="project_image_img" alt="test" src={this.props.image} />
+                    <img className="project_image_img" alt={ this.props.alt } src={this.props.image} />
                 </a>
             </div>
             <div className={ this.state.drawerOpen ? "project_drawer project_drawer_open" : "project_drawer project_drawer_closed" } onClick={ drawerClickHandler }>
