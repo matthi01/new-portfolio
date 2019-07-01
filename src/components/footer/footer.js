@@ -15,6 +15,7 @@ const footer = () => {
                     <SocialIcon url="https://github.com/matthi01" network="github" fgColor="white" />
                     <SocialIcon url="https://ca.linkedin.com/in/matthias-ruhland" network="linkedin" fgColor="white" />
                     <SocialIcon url="https://facebook.com/matthias-ruhland" network="facebook" fgColor="white" />
+                    <SocialIcon url="mailto:mruhland01@gmail.com?subject=Inquiry from matthiasruhland.com" network="email" fgColor="white" />
                 </div>
             </div>
         </footer>

@@ -1,0 +1,17 @@
+.title-text-block {
+    max-width: 65%;
+    margin: 20px auto 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+
+    &_title {
+        width: 40%;
+    }
+
+    &_text {
+        width: 60%
+    }
+}

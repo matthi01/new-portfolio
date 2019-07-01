@@ -6,6 +6,11 @@ const bullet = (props) => {
 
 
     const topDistance = (props.order * props.heightIncrement).toString() + "px"
+    let connectorLine = <div className="bullet_connector bullet_connector-right"></div>
+    
+    if ( props.orientation === "right" ) {
+        connectorLine = <div className="bullet_connector bullet_connector-left"></div>
+    }
 
     return (
         <div className={ props.orientation } style={{ top: topDistance }}>
@@ -14,6 +19,7 @@ const bullet = (props) => {
                 <p>{ props.date }</p>
                 <p>{ props.description }</p>
             </div>
+            { connectorLine }
         </div>
     )
 }
