@@ -23,6 +23,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow: 0px 0px 8px 0px white;
 
         & > * {
             transform: rotate(-45deg);
@@ -71,8 +72,9 @@
                     height: 2px;
                     bottom: -5px;
                     left: 0;
-                    // background-color: #a9b1b6;
-                    background-color: #0066ff;
+                    background-color: white;
+                    // background-color: #0066ff;
+                    box-shadow: 0px 0px 8px 0px white;
                     visibility: hidden;
                     -webkit-transform: scaleX(0);
                     transform: scaleX(0);

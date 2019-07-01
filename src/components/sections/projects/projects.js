@@ -5,44 +5,71 @@ import Project from "./project/project"
 import SectionGradientFooter from "../../ui/section-gradient-footer/section-gradient-footer"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 
+import imgBlockstream from "../../../images/blockstream.png"
+import imgBlockExplorer from "../../../images/block-explorer.png"
+import imgETax from "../../../images/etax.png"
+import imgBlockstreamStore from "../../../images/blockstream-store.png"
+import imgSatellite from "../../../images/satellite.png"
+import imgVolkfi from "../../../images/volkfi.png"
+import imgGreen from "../../../images/green.png"
+import imgGentax from "../../../images/gentax.png"
+
 const projects = () => {
 
     const arrProjects = [
         {
             title: "blockstream.com",
-            image: "construction-placeholder.png",
+            image: imgBlockstream,
             description: "Main Blockstream landing page. Built with Jekyll from the ground up.",
             link: "https://www.blockstream.com"
         },
         {
             title: "blockstream.info",
-            image: "image-path",
+            image: imgBlockExplorer,
             description: "Blockstream block explorer, build using react.",
             link: "https://www.blockstream.info"
         },
         {
             title: "store.blockstream.com",
-            image: "image-path",
+            image: imgBlockstreamStore,
             description: "Blockstream store using lightning payment technology.",
-            link: "https://www.store.blockstream.com"
+            link: "https://store.blockstream.com"
         },
         {
             title: "volkfi.com",
-            image: "image-path",
+            image: imgVolkfi,
             description: "Volkfi landing page.",
             link: "https://www.volkfi.com"
         },
         {
             title: "Blockstream Green (iOS)",
-            image: "image-path",
+            image: imgGreen,
             description: "Blockstream Green iOS wallet app.",
             link: "https://www.blockstream.com/green"
         }, 
         {
             title: "Blockstream Satellite Transmissions App",
-            image: "image-path",
+            image: imgSatellite,
             description: "Blockstream Satellite transmissions app",
             link: "https://www.blockstream.com/satellite/"
+        },
+        {
+            title: "eTaxBC",
+            image: imgETax,
+            description: "British Columbia's online tax portal.",
+            link: "https://www.etax.gov.bc.ca/btp/eservices/_/"
+        },
+        {
+            title: "Gentax",
+            image: imgGentax,
+            description: "Back end system for British Columbia's tax administration software",
+            link: "https://fastenterprises.com"
+        },
+        {
+            title: "Bitcoin in a Nutshell",
+            image: "image-path",
+            description: "Introductory book on bitcoin and the blockchain, available as ebook and print on amazon",
+            link: "https://amazon.ca"
         }
     ]
 
@@ -59,7 +86,7 @@ const projects = () => {
     return (
         <div className="projects" id="projects">
             <SectionGradientHeader />
-            <h1>Projects</h1>
+            <h1>Projects, Previous Work</h1>
             <div className="projects_container">
                 { projectElements } 
             </div>

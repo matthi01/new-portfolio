@@ -1,6 +1,6 @@
 import React from "react"
 
-import Image from "../components/image"
+import ConstructionImage from "../components/ui/responsive-images/construction-image"
 import { SocialIcon } from "react-social-icons"
 
 import "../styles/construction-page.scss"
@@ -8,7 +8,7 @@ import "../styles/construction-page.scss"
 const Construction = () => {
     return (
         <div>
-            <Image />
+            <ConstructionImage />
             <div style={{ 
                             display: "flex", 
                             flexDirection: "column", 
