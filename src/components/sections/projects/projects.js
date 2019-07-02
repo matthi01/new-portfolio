@@ -1,10 +1,8 @@
 import React from "react"
-
 import "./projects.scss"
 import Project from "./project/project"
 import SectionGradientFooter from "../../ui/section-gradient-footer/section-gradient-footer"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
-
 import imgBlockstream from "../../../images/blockstream.png"
 import imgBlockExplorer from "../../../images/block-explorer.png"
 import imgETax from "../../../images/etax.png"

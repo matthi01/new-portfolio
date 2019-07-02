@@ -1,5 +1,4 @@
 import React from "react"
-
 import { FaPlusCircle, FaMinusCircle } from 'react-icons/fa'
 import "./project.scss"
 

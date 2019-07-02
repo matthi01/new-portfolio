@@ -9,17 +9,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
-
 import Header from "./header/header"
 import Footer from "./footer/footer"
 import Navigation from "./ui/navigation/navigation"
 import "./layout.css"
 import "./layout-override.scss"
-
 import CssBaseline from '@material-ui/core/CssBaseline'
 
 if (typeof window !== "undefined") {
-  // eslint-disable-next-line global-require
   require("smooth-scroll")('a[href*="#"]')
 }
 

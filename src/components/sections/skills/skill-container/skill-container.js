@@ -1,5 +1,4 @@
 import React from "react"
-
 import "./skill-container.scss"
 
 const skillContainer = (props) => {

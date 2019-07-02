@@ -1,5 +1,4 @@
 import React from "react"
-
 import "./warning-banner.scss"
 
 const warningBanner = (props) => {

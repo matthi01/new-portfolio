@@ -1,5 +1,4 @@
 import React from "react"
-
 import Timeline from "./timeline/timeline"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 import "./history.scss"

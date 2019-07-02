@@ -1,7 +1,5 @@
 import React from "react"
-
 import Bullet from "./bullet/bullet"
-
 import "./timeline.scss"
 
 const timeline = (props) => {

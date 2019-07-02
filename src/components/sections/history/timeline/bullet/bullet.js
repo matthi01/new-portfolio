@@ -1,9 +1,7 @@
 import React from "react"
-
 import "./bullet.scss"
 
 const bullet = (props) => {
-
 
     const topDistance = (props.order * props.heightIncrement).toString() + "px"
     let connectorLine = <div className="bullet_connector bullet_connector-right"></div>

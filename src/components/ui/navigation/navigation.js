@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import "./navigation.scss"
-
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 class Navigation extends React.Component {

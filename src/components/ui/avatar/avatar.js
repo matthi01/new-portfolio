@@ -1,5 +1,4 @@
 import React from "react"
-
 import "./avatar.scss"
 
 const avatar = (props) => {

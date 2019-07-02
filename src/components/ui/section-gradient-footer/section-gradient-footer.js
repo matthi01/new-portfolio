@@ -1,5 +1,4 @@
 import React from "react"
-
 import "./section-gradient-footer.scss"
 
 const sectionGradientFooter = () => {

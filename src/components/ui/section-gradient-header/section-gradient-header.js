@@ -1,5 +1,4 @@
 import React from "react"
-
 import "./section-gradient-header.scss"
 
 const sectionGradientHeader = () => {

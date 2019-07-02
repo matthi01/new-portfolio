@@ -1,0 +1,17 @@
+.title-text-vertical {
+    max-width: 65%;
+    margin: 40px auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+
+    &_title {
+        width: 100%;
+    }
+
+    &_text {
+        width: 100%
+    }
+}

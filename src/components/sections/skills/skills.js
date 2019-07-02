@@ -1,9 +1,7 @@
 import React from "react"
-
 import SectionGradientFooter from "../../ui/section-gradient-footer/section-gradient-footer"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 import SkillContainer from "./skill-container/skill-container"
-
 import "./skills.scss"
 
 const skills = () => {
