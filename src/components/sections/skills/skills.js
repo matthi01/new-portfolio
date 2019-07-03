@@ -6,8 +6,8 @@ import "./skills.scss"
 
 const skills = () => {
 
-    const arrLanguages = ["Javascript", "HTML", "CSS", "Swift", "Python", "SQL"]
-    const arrFrameworks = ["React", "Gatsby", "Redux", "Jekyll", "xCode", "Solidity", "Node", "SQLServer", "MongoDB"]
+    const arrLanguages = ["Javascript", "HTML", "CSS", "Swift", "Python", "SQL", "VB.NET", "Solidity"]
+    const arrFrameworks = ["React", "Gatsby", "Redux", "Jekyll", "xCode", "Node", "SQLServer", "MongoDB"]
     const arrSoft = ["Business Analysis", "Consulting", "Public Speaking / Presentations", "Computer Science background, solid understanding of fundamental principles", "Determination to learn"]
 
     return (

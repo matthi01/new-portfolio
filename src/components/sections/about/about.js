@@ -13,16 +13,16 @@ const about = () => {
             <div className="about_content">
                 <TitleTextHorizontal 
                     title="Past" 
-                    text="this is some random text which has to be relatively long so I can see how I should style it best... blah blah blah, something something something. I think this might be long enough" />
+                    text="After graduating from Camosun, I started working for Fast Enterprises as an Implementation Consultant on tax software implementations. I got some good experience, but as the company grew, I grew into more of a consultant / business analyst role. After 6 years I realized I needed to make a change or risk my development skills fading. My interest in blockchain and cryptocurrencies led me to Blockstream." />
                 <TitleTextHorizontal 
                     title="Present" 
-                    text="this is some random text which has to be relatively long so I can see how I should style it best... blah blah blah, something something something. I think this might be long enough" />
+                    text="Consultant in recovery. Currently working at Blockstream as a web developer and junior iOS developer. Always looking for opportunities to expand my skillset." />
                 <TitleTextHorizontal 
                     title="Future" 
-                    text="this is some random text which has to be relatively long so I can see how I should style it best... blah blah blah, something something something. I think this might be long enough" />
+                    text="Going forward I will be working on expanding my skillset in both front-end and back-end development as well as mobile development for iOS. I will continue on side projects involving blockchain development and will be diving into the world of machine learning." />
                 <TitleTextVertical 
                     title="Interests" 
-                    text="this is some random text which has to be relatively long so I can see how I should style it best... blah blah blah, something something something. I think this might be long enough" />
+                    text="The research topics I am most interested in lately revolve around climate change, reneable energy, and emerging technologies such as blockchain, cryptocurrencies, machine learning, and the ever changing world of development in general. In my free time I like to work on side projects, and work on online courses to expose myself to new technologies. " />
             </div>
         </div>
     )
