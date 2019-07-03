@@ -3,9 +3,9 @@ import "./skill-container.scss"
 
 const skillContainer = (props) => {
 
-    const elSkills = props.skills.map((skill) => {
+    const elSkills = props.skills.map((skill, index) => {
         return (
-                    <p className="skill-container_skill">
+                    <p className="skill-container_skill" key={ index }>
                         { skill }
                     </p>
                 )

@@ -1,7 +1,6 @@
 import React from "react"
 import "./projects.scss"
 import Project from "./project/project"
-import SectionGradientFooter from "../../ui/section-gradient-footer/section-gradient-footer"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 import imgBlockstream from "../../../images/blockstream.png"
 import imgBlockExplorer from "../../../images/block-explorer.png"
@@ -81,13 +80,14 @@ const projects = () => {
         }
     ]
 
-    const projectElements = arrProjects.map((project) => {
+    const projectElements = arrProjects.map((project, index) => {
         return (
             <Project    
                 title={ project.title } 
                 image={ project.image } 
                 description={ project.description }
-                link={ project.link } />
+                link={ project.link }
+                key={ index } />
         )
     })
 
@@ -98,7 +98,6 @@ const projects = () => {
             <div className="projects_container">
                 { projectElements } 
             </div>
-            <SectionGradientFooter />
         </div>
     )
 }
