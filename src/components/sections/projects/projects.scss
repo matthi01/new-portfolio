@@ -28,3 +28,11 @@
         }
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .projects {
+        &_container {
+            width: 100%;
+        }
+    }
+}
