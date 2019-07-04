@@ -1,4 +1,5 @@
 import React from "react"
+import Fade from 'react-reveal/Fade'
 import "./skill-container.scss"
 
 const skillContainer = (props) => {
@@ -12,12 +13,14 @@ const skillContainer = (props) => {
     })
 
     return (
-        <div className="skill-container">
-            <h3 className="skill-container_title">
-                { props.title }
-            </h3>
-            { elSkills }
-        </div>
+        <Fade>
+            <div className="skill-container">
+                <h3 className="skill-container_title">
+                    { props.title }
+                </h3>
+                { elSkills }
+            </div>
+        </Fade>
     )
 }
 

@@ -1,4 +1,5 @@
 import React from "react"
+import Fade from 'react-reveal/Fade';
 import "./bullet.scss"
 
 const bullet = (props) => {
@@ -11,14 +12,16 @@ const bullet = (props) => {
     }
 
     return (
-        <div className={ props.orientation } style={{ top: topDistance }}>
-            <div className="bullet">
-                <h3>{ props.title }</h3>
-                <p>{ props.date }</p>
-                <p>{ props.description }</p>
+        <Fade bottom>
+            <div className={ props.orientation } style={{ top: topDistance }}>
+                <div className="bullet">
+                    <h3>{ props.title }</h3>
+                    <p>{ props.date }</p>
+                    <p>{ props.description }</p>
+                </div>
+                { connectorLine }
             </div>
-            { connectorLine }
-        </div>
+        </Fade>
     )
 }
 
