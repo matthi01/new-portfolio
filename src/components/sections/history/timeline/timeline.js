@@ -7,7 +7,7 @@ const timeline = (props) => {
     let timelineHeight = 850
     let heightIncrement;
 
-    if (window.innerWidth <= 800) {
+    if (document.window.innerWidth <= 800) {
         heightIncrement = 300
         timelineHeight = 1200
     } else {
