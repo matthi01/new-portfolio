@@ -9,7 +9,7 @@ class Timeline extends React.Component {
         this.state = {width: props.height};
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.setState({width: window.innerWidth})
     }
 
@@ -17,7 +17,7 @@ class Timeline extends React.Component {
 
         let heightIncrement;
         let timelineHeight;
-        
+
         if (this.state.width <= 800) {
             heightIncrement = 300
             timelineHeight = 1200
