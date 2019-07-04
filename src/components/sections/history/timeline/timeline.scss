@@ -13,3 +13,13 @@
         right: 50%;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .timeline {
+        &_line {
+            position: absolute;
+            left: auto;
+            right: 50px;
+        }
+    }
+}

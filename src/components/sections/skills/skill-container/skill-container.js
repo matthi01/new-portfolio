@@ -21,7 +21,7 @@ const skillContainer = (props) => {
                 { elSkills }
             </div>
         </Fade>
-    )
+    )   
 }
 
 export default skillContainer

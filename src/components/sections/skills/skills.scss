@@ -6,17 +6,28 @@
     padding-bottom: 100px;
 
     &_wrapper {
-        width: 75%;
+        width: 1200px;
         margin: 0 auto;
         height: auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-start;
+        flex-wrap: wrap
     }
 
     & h1 {
         position: relative;
         z-index: 1;
+    }
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .skills {
+        &_wrapper {
+            width: 90%;
+            justify-content: center;
+        }
     }
 }

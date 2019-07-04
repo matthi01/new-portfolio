@@ -7,6 +7,7 @@
     min-width: 250px;
     width: 250px;
     padding: 20px;
+    position: relative;
 
     &_connector {
         width: 100px;
@@ -39,4 +40,24 @@
     position: absolute;
     right: 0;
     text-align: right;
+}
+
+@media only screen and (max-width: 800px) {
+    .bullet {
+
+        &_connector {
+            &-left {
+                left: auto;
+                right: -100px;
+                background-image: linear-gradient(to right, #a9b1b6, transparent);
+            }
+        }
+    }
+
+    .left {
+        left: auto;
+        right: 0;
+        text-align: right;
+        margin-right: 200px;
+    }
 }

@@ -1,4 +1,6 @@
 .about {
+    width: 1200px;
+    margin: 0 auto; 
     height: auto;
     color: #a9b1b6;
     position: relative;
@@ -7,5 +9,11 @@
     & > * {
         position: relative;
         z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .about {
+        width: 80%;
     }
 }

@@ -10,3 +10,9 @@
     align-items: center;
     font-size: 30px;
 }
+
+@media only screen and (max-width: 950px) {
+    .warning-banner {
+        top: 5vh;
+    }
+}
