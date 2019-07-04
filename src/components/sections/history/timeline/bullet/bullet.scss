@@ -44,12 +44,17 @@
 
 @media only screen and (max-width: 800px) {
     .bullet {
+        right: 150px;
 
         &_connector {
             &-left {
                 left: auto;
-                right: -100px;
+                right: 50px;
                 background-image: linear-gradient(to right, #a9b1b6, transparent);
+            }
+
+            &-right {
+                right: 50px;
             }
         }
     }
@@ -58,6 +63,5 @@
         left: auto;
         right: 0;
         text-align: right;
-        margin-right: 200px;
     }
 }

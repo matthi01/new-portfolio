@@ -4,7 +4,16 @@ import "./timeline.scss"
 
 const timeline = (props) => {
 
-    const timelineHeight = 1000
+    let timelineHeight = 850
+    let heightIncrement;
+
+    if (window.innerWidth <= 800) {
+        heightIncrement = 300
+        timelineHeight = 1200
+    } else {
+        heightIncrement = 170
+        timelineHeight = 850
+    }
 
     const bullets = props.bullets.map((el, index) => {
         return <Bullet 
@@ -12,9 +21,9 @@ const timeline = (props) => {
                     date={ el.date }
                     description={ el.description }
                     key={ index } 
-                    order={ index + 1 } 
+                    order={ index  } 
                     orientation={ index % 2 === 0 ? "left" : "right" }
-                    heightIncrement={ timelineHeight / (props.bullets.length + 2) } />
+                    heightIncrement={ heightIncrement } />
     })
 
     return (
