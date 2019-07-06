@@ -18,28 +18,28 @@ const projects = () => {
         {
             title: "blockstream.com",
             image: imgBlockstream,
-            description: "Main Blockstream landing page. Built with Jekyll from the ground up.",
+            description: "Main Blockstream landing page. Built with Jekyll from the ground up as part of Blockstreams rebranding effort.",
             link: "https://www.blockstream.com",
             alt: "blockstream.com"
         },
         {
             title: "blockstream.info",
             image: imgBlockExplorer,
-            description: "Blockstream block explorer, build using react.",
+            description: "Blockstream's block explorer, built using react.",
             link: "https://www.blockstream.info",
             alt: "blockstream.info"
         },
         {
             title: "store.blockstream.com",
             image: imgBlockstreamStore,
-            description: "Blockstream store using lightning payment technology.",
+            description: "Blockstream store is a wordpress store that showcases lightning payment technology.",
             link: "https://store.blockstream.com",
             alt: "store.blockstream.com"
         },
         {
             title: "volkfi.com",
             image: imgVolkfi,
-            description: "Volkfi landing page.",
+            description: "Volkfi landing page. I was involved as a contractor in the early efforts of building the site.",
             link: "https://www.volkfi.com",
             alt: "volkfi.com"
         },
@@ -53,28 +53,28 @@ const projects = () => {
         {
             title: "Blockstream Satellite Transmissions App",
             image: imgSatellite,
-            description: "Blockstream Satellite transmissions app",
+            description: "Blockstream Satellite transmissions app. This web app is available on blockstream.com and allows you to submit files and text messages via the blockstream satellite network. Payments are handled through the lightning network.",
             link: "https://www.blockstream.com/satellite/",
             alt: "Blockstream Satellite Transmissions App"
         },
         {
             title: "eTaxBC",
             image: imgETax,
-            description: "British Columbia's online tax portal.",
+            description: "British Columbia's online tax portal. I spent several years as team lead for eTaxBC development.",
             link: "https://www.etax.gov.bc.ca/btp/eservices/_/",
             alt: "eTaxBC"
         },
         {
             title: "Gentax",
             image: imgGentax,
-            description: "Back end system for British Columbia's tax administration software",
+            description: "Back end system for British Columbia's tax administration software. I've worked in most areas of the software, including the online tax portal eTaxBC, Audit, Discovery, Interfaces, etc.",
             link: "https://fastenterprises.com",
             alt: "Gentax"
         },
         {
             title: "In a Nutshell: Bitcoin and the Blockchain",
             image: imgAmazon,
-            description: "Introductory book on bitcoin and the blockchain, available as ebook and print on amazon",
+            description: "Introductory book on bitcoin and the blockchain, available as ebook and print on amazon. I published this book under my mother's maiden name Schulz (M. Schulz).",
             link: "https://www.amazon.com/Nutshell-Bitcoin-Blockchain-M-Schulz/dp/1976722276/ref=sr_1_2?keywords=bitcoin+in+a+nutshell&qid=1562007175&s=books&sr=1-2",
             alt: "In a Nutshell: Bitcoin and the Blockchain"
         }
