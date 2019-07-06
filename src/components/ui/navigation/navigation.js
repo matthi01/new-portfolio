@@ -55,6 +55,6 @@ export default props => (
                 }
             }
         `}
-        render={data => <Navigation data={data} {... props} />}
+        render={ data => <Navigation data={data} {... props} /> }
     />
 )

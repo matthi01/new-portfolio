@@ -25,3 +25,11 @@
         }
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .timeline {
+        &_line {
+            right: 25px;
+        }
+    }
+}
