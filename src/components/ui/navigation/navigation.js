@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import "./navigation.scss"
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { StaticQuery, graphql } from "gatsby"
 
 class Navigation extends React.Component {
 
@@ -11,12 +12,19 @@ class Navigation extends React.Component {
     }
 
     render() {
-
         const navigationClickHandler = () => {
             this.setState((prevState) => ({
                 navOpen: !prevState.navOpen
             }))
         }
+
+        const navigationItems = this.props.data.allDataJson.edges[2].node.navigation.map((item) => {
+            return (
+                <div key={ item.link }>
+                    <Link to={ item.link }>{ item.label }</Link>
+                </div>
+            )
+        })
 
         return (
             <div className={ this.state.navOpen ? "navigation navigation_open" : "navigation navigation" }>
@@ -24,14 +32,29 @@ class Navigation extends React.Component {
                     { this.state.navOpen ? <FaTimes /> : <FaBars /> }
                 </div>
                 <div className={ this.state.navOpen ? "navigation_links navigation_links_show" : "navigation_links navigation_links_hide" }>
-                    <div><Link to="/#history">History</Link></div>
-                    <div><Link to="/#skills">Skills</Link></div>
-                    <div><Link to="/#about">About</Link></div>
-                    <div><Link to="/#projects">Projects</Link></div>
+                    { navigationItems }
                 </div>
             </div> 
         )
     }
 }
 
-export default Navigation
+export default props => (
+    <StaticQuery
+        query={graphql`
+            query NavigationQuery {
+                allDataJson {
+                    edges {
+                        node {
+                            navigation {
+                                label
+                                link
+                            }
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => <Navigation data={data} {... props} />}
+    />
+)

@@ -44,24 +44,25 @@ const About = about
 export default props => (
     <StaticQuery
         query={graphql`
-        query AllContentQuery {
-            allDataJson {
-                edges {
-                    node {
-                        about {
-                            horizontal {
-                                title
-                                text
-                            }
-                            vertical {
-                                title
-                                text
+            query AboutQuery {
+                allDataJson {
+                    edges {
+                        node {
+                            about {
+                                horizontal {
+                                    title
+                                    text
+                                }
+                                vertical {
+                                    title
+                                    text
+                                }
                             }
                         }
                     }
                 }
             }
-        }`}
+        `}
         render={ data => <About data={data} {...props} /> }
     />
 );

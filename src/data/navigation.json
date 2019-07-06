@@ -1,0 +1,20 @@
+{
+    "navigation": [
+        {
+            "label": "History",
+            "link": "/#history"
+        },
+        {
+            "label": "Skills",
+            "link": "/#skills"
+        },
+        {
+            "label": "About",
+            "link": "/#about"
+        },
+        {
+            "label": "Projects",
+            "link": "/#projects"
+        }
+    ]
+}
