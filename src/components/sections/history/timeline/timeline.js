@@ -4,9 +4,8 @@ import "./timeline.scss"
 
 class Timeline extends React.Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {width: props.height};
+    state = {
+        width: this.props.height
     }
 
     componentDidMount() {
@@ -29,7 +28,7 @@ class Timeline extends React.Component {
 
         const bullets = this.props.bullets.map((el, index) => {
             return <Bullet 
-                        title={ el.title } 
+                        title={ el.label } 
                         date={ el.date }
                         description={ el.description }
                         key={ index } 

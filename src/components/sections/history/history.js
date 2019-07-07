@@ -1,36 +1,35 @@
 import React from "react"
 import Timeline from "./timeline/timeline"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
+import { useStaticQuery, graphql } from "gatsby"
 import "./history.scss"
 
 const history = () => {
 
-    const arrHistoryBullets = [
-        {
-            title: "Camosun",
-            date: "2012",
-            description: "Diploma in Computer Systems Technology"
-        }, {
-            title: "Royal Roads",
-            date: "2012",
-            description: "Co-op working with PHP to create search algorithms / first introduction to Drupal... it wasn't great",
-        }, {
-            title: "Fast Enterprises",
-            date: "2012 - 2018",
-            description: "Team Lead for eTaxBC, developer for discovery, audit, and data warehousing",
-        }, {
-            title: "Blockstream",
-            date: "2018 - present",
-            description: "Web Developer / Junior iOS Developer",
+    const data = useStaticQuery(graphql`
+        query HistoryQuery {
+            allHistoryJson {
+                edges {
+                    node {
+                        history {
+                            title
+                            bullets {
+                                label
+                                date
+                                description
+                            }
+                        }
+                    }
+                }
+            }
         }
-    ]
+    `)
 
     return (
         <div className="history" id="history">
             <SectionGradientHeader />
-            <h1>History</h1>
-            <Timeline bullets={ arrHistoryBullets } />
-
+            <h1>{ data.allHistoryJson.edges[0].node.history.title }</h1>
+            <Timeline bullets={ data.allHistoryJson.edges[0].node.history.bullets } />
         </div>
     )
 }

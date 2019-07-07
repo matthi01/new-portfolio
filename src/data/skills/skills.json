@@ -1,22 +1,25 @@
 {
-    "skills": [
-        {
-            "type": "Languages",
-            "items": [
-                "Javascript", "HTML", "CSS", "Swift", "Python", "SQL", "VB.NET", "Solidity"
-            ]
-        },
-        {
-            "type": "Frameworks / Libraries",
-            "items": [
-                "React", "Gatsby", "Redux", "Jekyll", "xCode", "Node", "SQLServer", "MongoDB"
-            ]
-        },
-        {
-            "type": "Soft Skills",
-            "items": [
-                "Business Analysis", "Consulting", "Public Speaking / Presentations", "Computer Science background, solid understanding of fundamental principles", "Determination to learn"
-            ]
-        }
-    ]
+    "skills": {
+        "title": "Skills",
+        "skills": [
+            {
+                "type": "Languages",
+                "items": [
+                    "Javascript", "HTML", "CSS", "Swift", "Python", "SQL", "VB.NET", "Solidity"
+                ]
+            },
+            {
+                "type": "Frameworks / Libraries",
+                "items": [
+                    "React", "Gatsby", "Redux", "Jekyll", "xCode", "Node", "SQLServer", "MongoDB"
+                ]
+            },
+            {
+                "type": "Soft Skills",
+                "items": [
+                    "Business Analysis", "Consulting", "Public Speaking / Presentations", "Computer Science background, solid understanding of fundamental principles", "Determination to learn"
+                ]
+            }
+        ]
+    }
 }

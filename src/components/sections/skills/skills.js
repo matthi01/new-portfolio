@@ -12,8 +12,11 @@ const skills = () => {
                 edges {
                     node {
                         skills {
-                            type
-                            items
+                            title 
+                            skills {
+                                type
+                                items
+                            }
                         }
                     }
                 }
@@ -21,7 +24,7 @@ const skills = () => {
         }
     `)
 
-    const skillsContainers = data.allSkillsJson.edges[0].node.skills.map((element) => {
+    const skillsContainers = data.allSkillsJson.edges[0].node.skills.skills.map((element) => {
         return (
             <SkillContainer key={ element.type } title={ element.type } skills={ element.items } />
         )
@@ -29,7 +32,7 @@ const skills = () => {
 
     return (
         <div className="skills" id="skills">
-            <h1>Skills</h1>
+            <h1>{ data.allSkillsJson.edges[0].node.skills.title }</h1>
             <div className="skills_wrapper">
                 { skillsContainers }
             </div>
