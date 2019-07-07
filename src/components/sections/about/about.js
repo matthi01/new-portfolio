@@ -2,12 +2,33 @@ import React from "react"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 import TitleTextHorizontal from "./title-text-horizontal/title-text-horizontal"
 import TitleTextVertical from "./title-text-vertical/title-text-vertical"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import "./about.scss"
 
-const about = (data) => {
+const about = () => {
 
-    const horizontalElements = data.data.allDataJson.edges[1].node.about.horizontal.map((item) => {
+    const data = useStaticQuery(graphql`
+        query AboutQuery {
+            allDataJson {
+                edges {
+                    node {
+                        about {
+                            horizontal {
+                                title
+                                text
+                            }
+                            vertical {
+                                title
+                                text
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `)
+
+    const horizontalElements = data.allDataJson.edges[1].node.about.horizontal.map((item) => {
         return (
             <TitleTextHorizontal 
                 title={ item.title }
@@ -17,7 +38,7 @@ const about = (data) => {
         )
     })
 
-    const verticalElements = data.data.allDataJson.edges[1].node.about.vertical.map((item) => {
+    const verticalElements = data.allDataJson.edges[1].node.about.vertical.map((item) => {
         return (
             <TitleTextVertical 
                 title={ item.title }
@@ -39,30 +60,4 @@ const about = (data) => {
     )
 }
 
-const About = about
-
-export default props => (
-    <StaticQuery
-        query={graphql`
-            query AboutQuery {
-                allDataJson {
-                    edges {
-                        node {
-                            about {
-                                horizontal {
-                                    title
-                                    text
-                                }
-                                vertical {
-                                    title
-                                    text
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        `}
-        render={ data => <About data={data} {...props} /> }
-    />
-);
+export default about
