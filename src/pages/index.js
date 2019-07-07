@@ -5,18 +5,16 @@ import History from "../components/sections/history/history"
 import About from "../components/sections/about/about"
 import Skills from "../components/sections/skills/skills"
 import Projects from "../components/sections/projects/projects"
-// import Contact from "../components/sections/contact/contact"
-// import WarningBanner from "../components/ui/warning-banner/warning-banner"
+import BottomNotification from "../components/ui/bottom-notification/bottom-notification"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    {/* <WarningBanner title="* Under Construction *" /> */}
     <History />
     <Skills />
     <About />
     <Projects />
-    {/* <Contact /> */}
+    <BottomNotification text="View Website Repo" link="https://github.com/matthi01/new-portfolio" />
   </Layout>
 )
 
