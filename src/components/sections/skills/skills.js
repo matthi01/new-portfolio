@@ -1,21 +1,37 @@
 import React from "react"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 import SkillContainer from "./skill-container/skill-container"
+import { useStaticQuery, graphql } from "gatsby"
 import "./skills.scss"
 
 const skills = () => {
 
-    const arrLanguages = ["Javascript", "HTML", "CSS", "Swift", "Python", "SQL", "VB.NET", "Solidity"]
-    const arrFrameworks = ["React", "Gatsby", "Redux", "Jekyll", "xCode", "Node", "SQLServer", "MongoDB"]
-    const arrSoft = ["Business Analysis", "Consulting", "Public Speaking / Presentations", "Computer Science background, solid understanding of fundamental principles", "Determination to learn"]
+    const data = useStaticQuery(graphql`
+        query SkillsQuery {
+            allSkillsJson {
+                edges {
+                    node {
+                        skills {
+                            type
+                            items
+                        }
+                    }
+                }
+            }
+        }
+    `)
+
+    const skillsContainers = data.allSkillsJson.edges[0].node.skills.map((element) => {
+        return (
+            <SkillContainer key={ element.type } title={ element.type } skills={ element.items } />
+        )
+    })
 
     return (
         <div className="skills" id="skills">
             <h1>Skills</h1>
             <div className="skills_wrapper">
-                <SkillContainer title="Languages" skills={arrLanguages} />
-                <SkillContainer title="Frameworks / Libraries" skills={arrFrameworks} />
-                <SkillContainer title="Soft Skills" skills={arrSoft} />
+                { skillsContainers }
             </div>
             <SectionGradientHeader />
         </div>

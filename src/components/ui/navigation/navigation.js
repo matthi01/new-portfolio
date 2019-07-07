@@ -18,7 +18,7 @@ class Navigation extends React.Component {
             }))
         }
 
-        const navigationItems = this.props.data.allDataJson.edges[2].node.navigation.map((item) => {
+        const navigationItems = this.props.data.allNavigationJson.edges[0].node.navigation.map((item) => {
             return (
                 <div key={ item.link }>
                     <Link to={ item.link }>{ item.label }</Link>
@@ -43,7 +43,7 @@ export default props => (
     <StaticQuery
         query={graphql`
             query NavigationQuery {
-                allDataJson {
+                allNavigationJson {
                     edges {
                         node {
                             navigation {

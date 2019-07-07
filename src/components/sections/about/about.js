@@ -9,16 +9,17 @@ const about = () => {
 
     const data = useStaticQuery(graphql`
         query AboutQuery {
-            allDataJson {
+            allAboutJson {
                 edges {
                     node {
                         about {
+                            title
                             horizontal {
-                                title
+                                label
                                 text
                             }
                             vertical {
-                                title
+                                label
                                 text
                             }
                         }
@@ -28,22 +29,22 @@ const about = () => {
         }
     `)
 
-    const horizontalElements = data.allDataJson.edges[1].node.about.horizontal.map((item) => {
+    const horizontalElements = data.allAboutJson.edges[0].node.about.horizontal.map((item) => {
         return (
             <TitleTextHorizontal 
-                title={ item.title }
+                title={ item.label }
                 text={ item.text } 
-                key={ item.title }
+                key={ item.label }
             />
         )
     })
 
-    const verticalElements = data.allDataJson.edges[1].node.about.vertical.map((item) => {
+    const verticalElements = data.allAboutJson.edges[0].node.about.vertical.map((item) => {
         return (
             <TitleTextVertical 
-                title={ item.title }
+                title={ item.label }
                 text={ item.text } 
-                key={ item.title }
+                key={ item.label }
             />
         )
     })
@@ -51,7 +52,7 @@ const about = () => {
     return (
         <div className="about" id="about">
             <SectionGradientHeader />
-            <h1>About Me</h1>
+            <h1>{ data.allAboutJson.edges[0].node.about.title }</h1>
             <div className="about_content">
                 { horizontalElements }  
                 { verticalElements }
