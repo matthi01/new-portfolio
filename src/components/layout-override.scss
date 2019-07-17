@@ -6,6 +6,29 @@ html body {
     font-family: "Titillium Web" !important;
 }
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 h1 {
     text-align: center;
     padding: 50px;
@@ -19,3 +42,5 @@ h2 {
 h3 {
     user-select: none;
 }
+
+

@@ -14,7 +14,6 @@ import Footer from "./footer/footer"
 import Navigation from "./ui/navigation/navigation"
 import "./layout.css"
 import "./layout-override.scss"
-import CssBaseline from '@material-ui/core/CssBaseline'
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
@@ -36,8 +35,6 @@ const Layout = ({ children }) => {
     <div>
       <CssBaseline />
       <Helmet>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
       </Helmet>
       <div
