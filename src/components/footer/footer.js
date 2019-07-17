@@ -1,11 +1,28 @@
 import React from "react"
 import { SocialIcon } from "react-social-icons"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image';
 import "./footer.scss"
 
 const footer = () => {
+
+    const data = useStaticQuery(graphql`
+        query {
+            footer: file(relativePath: { eq: "footer.jpg" }) {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        `)
+
     return (
         <footer className="footer">
-            <div className="footer_image"></div>
+            <div className="footer_image">
+                <Img className="footer_image" alt="footer" fluid={data.footer.childImageSharp.fluid} />
+            </div>
             <div className="footer_content">
                 <div className="footer_copyright">
                     ©{new Date().getFullYear()} Matthias Ruhland
