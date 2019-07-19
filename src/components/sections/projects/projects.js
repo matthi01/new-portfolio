@@ -42,6 +42,14 @@ const projects = () => {
             amazon: file(relativePath: { eq: "amazon.png" }) {
                 ...fluidImage
             }
+            ebook: allFile(filter: {extension: {eq: "pdf"}, name: {glob: "eBook-excerpt"}}) {
+                edges {
+                    node {
+                        id
+                        publicURL
+                    }
+                }
+            }
         }
         `)
 
@@ -90,7 +98,7 @@ const projects = () => {
                 title: "Blockstream Satellite Transmissions App",
                 image: data.satellite.childImageSharp.fluid,
                 description: "Blockstream Satellite transmissions app. This web app is available on blockstream.com and allows you to submit files and text messages via the blockstream satellite network. Payments are handled through the lightning network.",
-                link: "https://www.blockstream.com/satellite/",
+                link: "https://www.blockstream.com/satellite-queue/",
                 alt: "Blockstream Satellite Transmissions App",
                 id: "satellite"
             },
@@ -134,9 +142,13 @@ const projects = () => {
     return (
         <div className="projects" id="projects">
             <SectionGradientHeader />
-            <h1>Projects, Previous Work</h1>
+            <h1>Previous Work</h1>
             <div className="projects_container">
                 { projectElements } 
+            </div>
+            <div className="projects_download">
+                <p>For more projects check out my github account</p>
+                <a href={ data.ebook.edges[0].node.publicURL } download>Download an excerpt from my eBook</a>
             </div>
         </div>
     )

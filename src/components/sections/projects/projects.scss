@@ -15,6 +15,26 @@
         flex-wrap: wrap;
     }
 
+    &_download {
+        text-align: center;
+        width: auto;
+        margin: 50px auto 20px auto;
+        max-width: 80%;
+        font-size: 20px;
+        
+        & a {
+            text-decoration: none;
+            color: #a9b1b6;
+            font-size: 25px;
+            display: block;
+            margin-top: 50px;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
     & > * {
         position: relative;
         z-index: 1;
