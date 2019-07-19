@@ -1,0 +1,16 @@
+.blog-post {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 80%;
+
+    &_content {
+        color: #a9b1b6;
+
+        & a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}

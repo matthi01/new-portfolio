@@ -1,0 +1,11 @@
+.blog-header {
+    height: 50vh;
+    position: relative;
+    margin-bottom: 75px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 86.5%, 50% 100%, 0 86.5%, 0 0);
+
+    &_image {
+        filter: brightness(45%);
+        height: 100%;
+    }
+}
