@@ -1,11 +1,15 @@
+@import "../styles/parameters.scss";
+
 .blog-post {
-    color: white;
+    color: $primary-text-color;
     max-width: 800px;
     margin: 0 auto;
     width: 80%;
+    margin-bottom: 100px;
+    line-height: 1.5;
 
     &_content {
-        color: #a9b1b6;
+        color: $primary-text-color;
 
         & a {
             color: white;

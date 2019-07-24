@@ -14,7 +14,7 @@ export default function Template({
             <BlogHeader />
             <div className="blog-post_container">
                 <div className="blog-post">
-                    <h3>{frontmatter.date}</h3>
+                    <h4>{frontmatter.date}</h4>
                     <h3>Written by: {frontmatter.author}</h3>
                     <div
                         className="blog-post_content"
