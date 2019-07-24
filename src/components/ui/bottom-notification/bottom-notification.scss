@@ -1,6 +1,8 @@
+@import "../../../styles/parameters.scss";
+
 .bottom-notification {
-    background-color: black;
-    color: white;
+    background-color: $dark-black;
+    color: $light-white;
     padding: 15px;
     text-align: center;
     position: fixed;

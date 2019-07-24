@@ -1,5 +1,7 @@
+@import "../../../styles/parameters.scss";
+
 .warning-banner {
-    background-color: black;
+    background-color: $dark-black;
     height: 100px;
     width: 100%;
     position: absolute;

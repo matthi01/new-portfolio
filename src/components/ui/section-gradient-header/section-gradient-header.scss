@@ -12,7 +12,7 @@
         background-color: $primary-background-color;
         background-image: radial-gradient(
             20rem at center,
-            lighten(blue, 35%),
+            lighten($header-gradient-color, 35%),
             $primary-background-color
         );
     }
@@ -20,7 +20,7 @@
     &_gradient {
         background: radial-gradient(
         ellipse at top,
-        darken(blue, 35%) -100%,
+        darken($header-gradient-color, 35%) -100%,
         $primary-background-color 70%
         );
         height: 27rem;

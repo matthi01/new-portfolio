@@ -14,7 +14,7 @@
         height: 40px;
         width: 40px;
         border: 1px solid $primary-text-color;
-        background-color: black;
+        background-color: $dark-black;
         position: absolute;
         z-index: 999;
         right: -20px;
@@ -73,7 +73,7 @@
                     height: 2px;
                     bottom: -5px;
                     left: 0;
-                    background-color: white;
+                    background-color: $light-white;
                     box-shadow: $light-box-shadow;
                     visibility: hidden;
                     -webkit-transform: scaleX(0);
