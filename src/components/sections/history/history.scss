@@ -1,7 +1,9 @@
+@import "../../../styles/parameters.scss";
+
 .history {
     min-height: 1100px;
     height: auto;
-    color: #a9b1b6;
+    color: $primary-text-color;
     position: relative;
     padding-bottom: 100px;
 

@@ -1,3 +1,5 @@
+@import "../../../../styles/parameters.scss";
+
 .timeline {
     height: auto;
     width: 700px;
@@ -7,7 +9,7 @@
 
     &_line {
         width: 3px;
-        background-image: linear-gradient(#a9b1b6, transparent);
+        background-image: linear-gradient($primary-text-color, transparent);
         position: absolute;
         left: 50%;
         right: 50%;

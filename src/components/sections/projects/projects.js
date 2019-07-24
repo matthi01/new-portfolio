@@ -3,7 +3,7 @@ import "./projects.scss"
 import Project from "./project/project"
 import Fade from 'react-reveal/Fade'
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const projects = () => {
 
@@ -149,8 +149,8 @@ const projects = () => {
             </div>
             <Fade bottom>
                 <div className="projects_download">
-                    <p>For more projects check out my github account</p>
-                    <a href={ data.ebook.edges[0].node.publicURL } download>Download an excerpt from my eBook</a>
+                    <p><a style={{ fontSize: "18px" }} href="https://github.com/matthi01" target="blank">For more projects check out my github account</a></p>
+                    <a style={{ fontSize: "25px" }} href={ data.ebook.edges[0].node.publicURL } download>Download an excerpt from my eBook</a>
                 </div>
             </Fade>
         </div>

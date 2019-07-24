@@ -1,6 +1,8 @@
+@import "../../../styles/parameters.scss";
+
 .about {
     height: auto;
-    color: #a9b1b6;
+    color: $primary-text-color;
     position: relative;
     padding-bottom: 100px;
 

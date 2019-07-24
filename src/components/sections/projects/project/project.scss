@@ -1,13 +1,15 @@
+@import "../../../../styles/parameters.scss";
+
 .project {
     height: 250px;
     width: 300px;
-    color: #a9b1b6;
+    color: $primary-text-color;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
-    box-shadow: 0px 0px 8px 0px black;
+    box-shadow: $dark-box-shadow;
     position: relative;
     margin: 35px 35px;
 
@@ -25,7 +27,7 @@
     &_drawer {
         height: 35px;
         background-color: black;
-        border-top: 1px solid #a9b1b6;
+        border-top: 1px solid $primary-text-color;
         position: relative;
         
 
@@ -52,10 +54,10 @@
         }
 
         &_icon {
-            color: #a9b1b6;
+            color: $primary-text-color;
             font-size: 20px;
             height: 35px;
-            border-top: 1px solid #a9b1b6;
+            border-top: 1px solid $primary-text-color;
             position: absolute;
             bottom: 0;
             left: 0;

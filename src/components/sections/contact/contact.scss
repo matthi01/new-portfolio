@@ -1,7 +1,9 @@
+@import "../../../styles/parameters.scss";
+
 .contact {
     min-height: 100vh;
     height: auto;
-    color: #a9b1b6;
+    color: $primary-text-color;
     position: relative;
     padding-bottom: 100px;
 

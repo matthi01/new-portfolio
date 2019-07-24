@@ -1,5 +1,7 @@
+@import "../styles/parameters.scss";
+
 html body {
-    background-color: #191919;
+    background-color: $primary-background-color;
 }
 
 * {
