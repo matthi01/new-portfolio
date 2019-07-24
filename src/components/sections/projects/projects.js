@@ -1,6 +1,7 @@
 import React from "react"
 import "./projects.scss"
 import Project from "./project/project"
+import Fade from 'react-reveal/Fade'
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -146,10 +147,12 @@ const projects = () => {
             <div className="projects_container">
                 { projectElements } 
             </div>
-            <div className="projects_download">
-                <p>For more projects check out my github account</p>
-                <a href={ data.ebook.edges[0].node.publicURL } download>Download an excerpt from my eBook</a>
-            </div>
+            <Fade bottom>
+                <div className="projects_download">
+                    <p>For more projects check out my github account</p>
+                    <a href={ data.ebook.edges[0].node.publicURL } download>Download an excerpt from my eBook</a>
+                </div>
+            </Fade>
         </div>
     )
 }

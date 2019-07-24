@@ -1,0 +1,20 @@
+@import "../styles/parameters.scss";
+
+.blog-post {
+    color: $primary-text-color;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 100px;
+    line-height: 1.5;
+
+    &_content {
+        color: $primary-text-color;
+
+        & a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}

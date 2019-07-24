@@ -7,9 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
-import Header from "./header/header"
 import Footer from "./footer/footer"
 import Navigation from "./ui/navigation/navigation"
 import "./layout.css"
@@ -20,17 +18,6 @@ if (typeof window !== "undefined") {
 }
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title,
-          subtitle
-        }
-      }
-    }
-  `)
-
   return (
     <div>
       <Helmet>
@@ -42,7 +29,6 @@ const Layout = ({ children }) => {
         }}
       >
         <Navigation />
-        <Header title={data.site.siteMetadata.title} subtitle={data.site.siteMetadata.subtitle} />
         <main>{children}</main>
         <Footer />
       </div>
