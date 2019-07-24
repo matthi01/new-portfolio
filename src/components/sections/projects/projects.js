@@ -3,7 +3,7 @@ import "./projects.scss"
 import Project from "./project/project"
 import Fade from 'react-reveal/Fade'
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const projects = () => {
 
