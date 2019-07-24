@@ -3,6 +3,7 @@ path: "/blog/speeding-up-jekyll"
 title: "Speeding up a Jekyll Site"
 date: "2019-07-16"
 author: "Matthi"
+excerpt: "How to increase your page speed for a Jekyll site"
 ---
 
 # Speeding up a Jekyll Site
@@ -13,6 +14,8 @@ The site is very content heavy with images, and because I was under a lot of pre
 I'm embarassed to say he original ranking of the site was sitting at 80 for desktop and a whopping 42 for mobile. For being a static site, even with a lot of content and images I was kind of shocked. I could definitely do better than that.
 
 What followed next was a nice chunk of work to keep me busy for a bit. I thought documenting the steps I took would make for a good first blog article for anyone that is currently in the same position and needs to speed up a jekyll site. I was a bit limited with time but here were the big items that were quick to implement and brought substancial speed improvements.
+
+<br>
 
 ## Images!
 To be honest, I've always hated dealing with images. However, after dealing with optimizing images with both jekyll and gatsby I actually kind of appreciate the problem a bit more... and the solutions.
@@ -28,37 +31,52 @@ After these steps (depending on how image heavy your site is) you should already
 
 After the images are done, next step is to minify everything. 
 
+<br>
+
 ## Minify the css:
 If you're using sass this is super simple, under your scss setting in your config.yml file, just add 'style: compress'. Once your build the site, jekyll will automatically compress the compiled css file. Otherwise, you will be able to use the same plugin used for minifying the JS below.
+
+<br>
 
 ## Minify the html:
 There's a nice little plugin for this as well: [compress-html](https://jch.penibelst.de/). Great thing about this is that it is just straight up liquid code, and not a real ruby gem plugin. The documentation is fantastic and easy to follow, you can check out the details [here](https://jch.penibelst.de/).
 
 The just of it is, download the compress.html file, throw it into your layout folder, then reference the compress layout in your highest-level layout (probably default layout), set up your configuration settings in your config.yml file, and you're good to go, during the build, the HTML will be compressed.
 
+<br>
+
 ## Minify JS:
 [jekyll-minifier](https://github.com/digitalsparky/jekyll-minifier). If you aren't using SASS you will actually be able to use this plugin to minify your CSS as well, its a great tool. Again, the documentation is very easy and straight forward to follow.
+
+<br>
 
 ## Get rid of unused CSS:
 For jekyll I decided to use [UnCSS](https://github.com/uncss/uncss), however there are quite a few tools that you can use for this. One more that you could use is [PurgeCSS](https://www.purgecss.com/). Especially for static sites this is a great tool to remove any CSS rules that aren't actually being used anymore. Even if you're careful with cleaning up your CSS, its difficult to not have at least a few rules in your stylesheet that aren't being used anymore. These tools will clean up those rules and shrink your CSS filesize.
 
 Now one thing that I was thinking about doing was to split up my one large CSS file which covers the whole site into individual stylesheets for each page. This would really cut down on unused CSS rules and cut individual filesizes down, however, you would then need to have an extra request for loading a new CSS file for each page. I'm really not too sure what would be the better approach here yet, but for now I decided to stick with a single stylesheet.
 
+<br>
+
 ## Use a CDN:
 There are some pretty good CDNs out there that are free to use and will definitely speed up your site as well. However, for this particular site security was a major concern. I was able to speed up the site significantly in other ways, so there was no real reason to go with a paid plan for a CDN yet. Free CDNs might be the way to go for some sites. However, they do create a single point of failure so if the free CDN provider that you use gets hacked, you may be screwed.
 
 A CDN is a Content Delivery Network, the general idea of it is that you spread out your resources to servers across the world which will cut down the time it takes for clients across the world to connect to your site. Say for example you host your site in Canada, if someone from Asia accesses your site, they may experience a larger delay as the data has to travel further. A CDN will host your site on a node closer to that specific client, increasing the speed of the load.
 
+<br>
+
 ## Logical Resource Loading
 
-Go through your head tag and check all of the resources that you're importing, check if you can defer any of them to the end of the rendering process. Anything that isn't used right away should probably be defered. You can also use the async flag to load the javascript asynchronously if it is needed. This will speed up the initial rendering of the site as there are less blocking resources being loaded at render time.
+Go through your `<head>`&nbsp;tag and check all of the resources that you're importing, check if you can defer any of them to the end of the rendering process. Anything that isn't used right away should probably be defered. You can also use the async flag to load the javascript asynchronously if it is needed. This will speed up the initial rendering of the site as there are less blocking resources being loaded at render time.
 
 For example: If you have some javascript that handles an image slider on the bottom of one of your pages. You probably don't need to load this script before rendering the page, so add a defer attribute to it.
+
+<br>
 
 ## Outcome
 
 Starting out I had the figures 80 and 42 for desktop and mobile respectively. After applying these simple few steps I was able to bump that number up to 95 and 67. There's still a lot of room for improvement, but I didn't have too much time for this little side project, so for the limited time I had, I am quite happy with the improvement. Let's consider it a good start.
 
+<br>
 
 ## To summarize:
 

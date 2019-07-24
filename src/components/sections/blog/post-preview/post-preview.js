@@ -9,7 +9,7 @@ const postPreview = (props) => {
             <Link to={ props.path } style={{ textDecoration: "none" }}>
                 <div className="post-preview">
                     <div className="post-preview_title">{ props.title }</div>
-                    <div className="post-preview_text">{ props.text }</div>
+                    <div className="post-preview_text">{ props.excerpt }</div>
                     <div className="post-preview_meta">
                         <div className="post-preview_meta_author">{ props.author }</div>
                         <div>|</div>

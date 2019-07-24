@@ -16,6 +16,7 @@ const blog = () => {
                             title
                             path
                             date
+                            excerpt
                         }
                     }
                 }
@@ -28,7 +29,7 @@ const blog = () => {
             <PostPreview 
                 path={ post.node.frontmatter.path }
                 title={ post.node.frontmatter.title }
-                text={ post.node.frontmatter.title }
+                excerpt={ post.node.frontmatter.excerpt }
                 author={ post.node.frontmatter.author }
                 date={ post.node.frontmatter.date }
                 key= { index } />
