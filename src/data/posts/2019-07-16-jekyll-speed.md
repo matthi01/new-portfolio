@@ -11,7 +11,7 @@ excerpt: "How to increase your page speed for a Jekyll site"
 I recently found myself with some spare time at work. I hate idling so I checked the page speed of our main jekyll site... and I was quite suprised!
 The site is very content heavy with images, and because I was under a lot of pressure to get the site done as quickly as possible, I didn't pay as much attention to speed and optimization as I should have. 
 
-I'm embarassed to say he original ranking of the site was sitting at 80 for desktop and a whopping 42 for mobile. For being a static site, even with a lot of content and images I was kind of shocked. I could definitely do better than that.
+I'm embarassed to say the original ranking of the site was sitting at 80 for desktop and a whopping 42 for mobile. For being a static site, even with a lot of content and images I was kind of shocked. I could definitely do better than that.
 
 What followed next was a nice chunk of work to keep me busy for a bit. I thought documenting the steps I took would make for a good first blog article for anyone that is currently in the same position and needs to speed up a jekyll site. I was a bit limited with time but here were the big items that were quick to implement and brought substancial speed improvements.
 

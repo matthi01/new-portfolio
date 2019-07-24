@@ -10,7 +10,8 @@
     box-shadow: $dark-box-shadow;
     background-color: $dark-black;
     transition: .3s;
-    padding: 25px 0 0 25px;
+    padding: 25px;
+    padding-bottom: 50px;
 
     &:hover {
         box-shadow: $light-box-shadow;
@@ -21,19 +22,21 @@
         font-size: 25px;
         font-weight: 600;
         color: $light-white;
+        line-height: 1.5;
     }
 
     &_text {
         font-size: 18px;
         color: $primary-text-color;
         margin-top: 15px;
+        line-height: 1.5;
     }
 
     &_meta {
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 200px;
+        width: 190px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
