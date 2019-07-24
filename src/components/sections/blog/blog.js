@@ -15,7 +15,7 @@ const blog = () => {
                             author
                             title
                             path
-                            date
+                            date(formatString: "MMMM DD, YYYY")
                             excerpt
                         }
                     }
