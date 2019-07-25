@@ -1,0 +1,21 @@
+.hash {
+    width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px solid white;
+
+    &_name {
+        display: block;
+        width: 90%;
+        background-color: transparent;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+        outline: none;
+    }
+
+    &_display {
+        width: 90%;
+        margin-top: 25px;
+    }
+}

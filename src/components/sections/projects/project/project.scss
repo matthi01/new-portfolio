@@ -29,7 +29,6 @@
         background-color: $dark-black;
         border-top: 1px solid $primary-text-color;
         position: relative;
-        
 
         &_open {
             height: 100%;
@@ -66,6 +65,11 @@
             justify-content: center;
             align-items: center;
             background-color: $dark-black;
+
+            &:hover {
+                color: $light-white;
+                transition: .3s;
+            }
         }
     }
 }

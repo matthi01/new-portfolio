@@ -4,6 +4,9 @@ import PostPreview from "./post-preview/post-preview"
 import SectionGradientHeader from "../../ui/section-gradient-header/section-gradient-header"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Block from "../../example-components/block/block"
+import Hash from "../../example-components/hash/hash"
+
 const blog = () => {
 
     const data = useStaticQuery(graphql`
@@ -41,6 +44,9 @@ const blog = () => {
             <SectionGradientHeader />
             <h1>Blog</h1>
             { allPosts }
+
+            <Block />
+            <Hash />
         </div>
     )
 }
