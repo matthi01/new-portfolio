@@ -24,7 +24,7 @@ class Hash extends React.Component {
 
     render() {
         return (
-            <div className="hash">
+            <span className="hash">
                 <input
                     className="hash_name"
                     type="text"
@@ -32,10 +32,10 @@ class Hash extends React.Component {
                     onChange={ this.onHashChange }
                     value={ this.state.data } />
 
-                <div className="hash_display">
+                <span className="hash_display">
                     <span id="hash-display-field">Calculated Hash Value</span>
-                </div>
-            </div>
+                </span>
+            </span>
         )
     } 
 }

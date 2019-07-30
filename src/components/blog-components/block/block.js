@@ -12,12 +12,24 @@ class Block extends React.Component {
         hash: ""
     }
 
-    onDataChange = (e) => {
-        this.setState({
+    onDataChange = async (e) => {
+        await this.setState({
             data: e.target.value,
             touched: true,
             mined: false
         })
+        this.hashBlock(this.state.nonce)
+    }
+
+    onNonceChange = async (e) => {
+        if (!isNaN(e.target.value)) {
+            await this.setState({
+                nonce: e.target.value,
+                touched: true,
+                mined: false
+            })
+        }
+        this.hashBlock(this.state.nonce)
     }
 
     fieldChange = () => {
@@ -57,14 +69,16 @@ class Block extends React.Component {
                 nonce: nonce,
                 touched: false
             })
+            document.getElementById("block-hash").innerText = hashValue
             return true
         }
+        document.getElementById("block-hash").innerText = hashValue
         return false
     }
 
     render() {
         return (
-            <div className={this.state.mined ? "block mined" : "block"} >
+            <span className={this.state.mined ? "block mined" : "block"} >
                 <label >Data</label>
                 <input 
                     id="block_data" 
@@ -77,19 +91,14 @@ class Block extends React.Component {
                     id="block_nonce" 
                     type="text" 
                     placeholder="Nonce"
-                    onChange={ this.fieldChange }
+                    onChange={ this.onNonceChange }
                     value={ this.state.nonce } />
     
                 <label >Block Hash</label>
-                <input 
-                    id="block_hash" 
-                    type="text" 
-                    placeholder="Block Hash" 
-                    onChange={ this.fieldChange }
-                    value={ this.state.hash } />
+                <span id="block-hash">0</span>
     
                 <button onClick={ this.onMineClickHandler }>Mine</button>
-            </div>
+            </span>
         )
     }
 }
