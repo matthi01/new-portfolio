@@ -44,7 +44,7 @@ class Block extends React.Component {
         let index = 0
         let mined = this.state.mined
 
-        while (!mined && index < 10000) {
+        while (!mined && index < 25000) {
             mined = this.hashBlock(currNonce)
             if (!mined) {
                 currNonce++

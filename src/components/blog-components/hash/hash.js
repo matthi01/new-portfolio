@@ -4,7 +4,8 @@ import sha256 from "js-sha256"
 
 class Hash extends React.Component {
     state={
-        data: ""
+        data: "",
+        output: "Calculated Hash Value"
     }
 
     onHashChange = async (e) => {
@@ -19,7 +20,9 @@ class Hash extends React.Component {
         hash.update(this.state.data)
 
         let hashValue = hash.hex()
-        document.getElementById("hash-display-field").innerText = hashValue
+        this.setState({
+            output: hashValue
+        })
     }
 
     render() {
@@ -33,7 +36,7 @@ class Hash extends React.Component {
                     value={ this.state.data } />
 
                 <span className="hash_display">
-                    <span id="hash-display-field">Calculated Hash Value</span>
+                    { this.state.output }
                 </span>
             </span>
         )
