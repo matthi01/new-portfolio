@@ -21,7 +21,7 @@ class Navigation extends React.Component {
         const navigationItems = this.props.data.allNavigationJson.edges[0].node.navigation.map((item) => {
             return (
                 <div key={ item.link }>
-                    <Link to={ item.link }>{ item.label }</Link>
+                    { item.link ? <Link to={ item.link }>{ item.label }</Link> : <a href={ this.props.data.resume.edges[0].node.publicURL } download>{ item.label }</a> }
                 </div>
             )
         })
@@ -42,14 +42,23 @@ class Navigation extends React.Component {
 export default props => (
     <StaticQuery
         query={graphql`
-            query NavigationQuery {
+            query {
                 allNavigationJson {
                     edges {
                         node {
                             navigation {
                                 label
                                 link
+                                download
                             }
+                        }
+                    }
+                }
+                resume: allFile(filter: {extension: {eq: "pdf"}, name: {glob: "matthias-ruhland"}}) {
+                    edges {
+                        node {
+                            id
+                            publicURL
                         }
                     }
                 }
